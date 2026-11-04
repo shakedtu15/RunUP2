@@ -1,10 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#FDF6E3"> <!-- רקע קרמי תואם לאפליקציה -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- כותרת ראשית -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="יצירת חשבון חדש"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- שדה שם משתמש -->
+    <EditText
+        android:id="@+id/et_reg_username"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@android:color/white"
+        android:hint="שם משתמש"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"
+        android:textColorHint="#A0A0A0"
+        android:elevation="2dp" />
+
+    <!-- שדה סיסמה -->
+    <EditText
+        android:id="@+id/et_reg_password"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@android:color/white"
+        android:hint="סיסמה (לפחות 6 תווים)"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPassword"
+        android:textColorHint="#A0A0A0"
+        android:elevation="2dp" />
+
+    <!-- שדה אימות סיסמה -->
+    <EditText
+        android:id="@+id/et_reg_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@android:color/white"
+        android:hint="אימות סיסמה"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:inputType="textPassword"
+        android:textColorHint="#A0A0A0"
+        android:elevation="2dp" />
+
+    <!-- כפתור הרשמה -->
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="הירשמי"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#B74B00"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
